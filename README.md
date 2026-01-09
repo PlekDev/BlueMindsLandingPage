@@ -48,10 +48,10 @@ La página destaca los dos pilares algorítmicos de nuestra solución:
 Neuro-BlueMinds es un proyecto nacido del talento multidisciplinario del programa **Líderes del Mañana** (11.ª y 12.ª Generación) del Tecnológico de Monterrey, ganador del **DigiEduHack 2025** (Etapa Local).
 
 * **Luis Nazariego** - CEO & Estrategia (IBM)
+* **Jose Miguel** - Co-Founder (IM)
 * **Víctor André Velázquez** - Backend & AI Architecture (ITC)
-* **Jose Miguel** - UX Sensorial (IM)
-* **Diego Martín** - Frontend Development (ITC)
-* **Carlos Alberto** - Estrategia Biotecnológica (IBT)
+* **Diego Martín** - Frontend / UX Development (ITC)
+* **Carlos Alberto** - Consultor de Estrategias (IBT)
 
 ---
 
