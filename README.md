@@ -40,17 +40,3 @@ Para garantizar velocidad de carga inmediata en entornos de alta concurrencia (c
 La página destaca los dos pilares algorítmicos de nuestra solución:
 1. **LPR (Latency Response)**: Medición de tiempos de procesamiento cognitivo.
 2. **TEP (Tasa de Error Perseverativo)**: Identificación de bucles de aprendizaje para ajuste dinámico de contenido.
-
----
-
-## 📂 Estructura del Repositorio
-
-```text
-/
-├── index.html          → Lógica SPA y estructura principal (Single File).
-├── assets/
-│   ├── logos/          → Branding oficial (Neuro-BlueMinds, LDM, Tec).
-│   ├── team/           → Perfiles profesionales de los 5 integrantes.
-│   └── og-preview.jpg  → Preview optimizada para compartir en LinkedIn/WhatsApp.
-├── favicons/           → Iconos multiplataforma.
-└── README.md           → Documentación del repositorio.
