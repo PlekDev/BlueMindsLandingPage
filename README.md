@@ -19,8 +19,8 @@ Esta landing page actúa como el rostro corporativo del proyecto, optimizada par
 
 ## 🌐 Accesos Directos
 
-- **Demo en Vivo (Landing)**: [https://plekdev.github.io/BlueMindsLandingPage/](https://plekdev.github.io/BlueMindsLandingPage/)
-- **Acceso a la Plataforma (MVP)**: *Próximamente en [https://plekdev.github.io/BlueMinds/](https://plekdev.github.io/BlueMinds/)*
+- **Demo en Vivo (Landing)**: [https://tu-usuario.github.io/neuro-blueminds](https://tu-usuario.github.io/neuro-blueminds)
+- **Acceso a la Plataforma (MVP)**: *Próximamente en [https://app.neuroblueminds.com](https://app.neuroblueminds.com)*
 
 ---
 
@@ -40,3 +40,20 @@ Para garantizar velocidad de carga inmediata en entornos de alta concurrencia (c
 La página destaca los dos pilares algorítmicos de nuestra solución:
 1. **LPR (Latency Response)**: Medición de tiempos de procesamiento cognitivo.
 2. **TEP (Tasa de Error Perseverativo)**: Identificación de bucles de aprendizaje para ajuste dinámico de contenido.
+
+---
+
+## 👥 El Equipo (Líderes del Mañana)
+
+Neuro-BlueMinds es un proyecto nacido del talento multidisciplinario del programa **Líderes del Mañana** (11.ª y 12.ª Generación) del Tecnológico de Monterrey, ganador del **DigiEduHack 2025** (Etapa Local).
+
+* **Luis Nazariego** - CEO & Estrategia (IBM)
+* **Víctor André Velázquez** - Backend & AI Architecture (ITC)
+* **Jose Miguel** - UX Sensorial (IM)
+* **Diego Martín** - Frontend Development (ITC)
+* **Carlos Alberto** - Estrategia Biotecnológica (IBT)
+
+---
+
+## 📧 Contacto
+¿Interesado en una alianza o pilotaje? Contáctanos a través de la sección de soporte en la web o vía LinkedIn.
