@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neuro-BlueMinds: Plataforma de neuroeducación con IA para intervención temprana en TEA. Ganadores DigiEduHack 2025. Ponentes IFE Conference 2026. Historia, tecnología e impacto social.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Neuro-BlueMinds | Neuroeducación Adaptativa con IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .blue-gradient { background: radial-gradient(circle at top right, #1e40af, #1e3a8a, #020617); }
+        .nav-glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .page-view { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hidden-view { display: none; opacity: 0; transform: scale(0.98); }
+        .active-view { display: block; opacity: 1; transform: scale(1); }
+        .stat-card { border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="showPage('home')">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                    <img src="Media/BlueMindsSinFondo.webp" />
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-extrabold leading-none text-blue-900">NEURO-BLUEMINDS</span>
+                    <span class="text-[10px] font-bold text-blue-500 tracking-[0.2em] uppercase">AI Early Intervention</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 font-semibold text-slate-600">
+                <button onclick="showPage('home')" class="hover:text-blue-600 transition">Inicio</button>
+                <button onclick="showPage('historia')" class="hover:text-blue-600 transition">Historia</button>
+                <button onclick="showPage('tecnologia')" class="hover:text-blue-600 transition">Tecnología</button>
+                <button onclick="showPage('impacto')" class="hover:text-blue-600 transition">Impacto Social</button>
+                <button onclick="showPage('equipo')" class="hover:text-blue-600 transition">Equipo</button>
+                <a href="#contacto" class="bg-blue-600 text-white px-7 py-3 rounded-full hover:bg-blue-700 transition shadow-xl shadow-blue-600/20 active:scale-95">
+                    Presentación IFE 2026
+                </a>
+            </div>
+            <button class="lg:hidden text-2xl text-slate-600" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white px-6 py-4 space-y-4 font-semibold text-slate-600 border-t border-slate-200">
+            <button onclick="showPage('home'); toggleMobileMenu()" class="block w-full text-left">Inicio</button>
+            <button onclick="showPage('historia'); toggleMobileMenu()" class="block w-full text-left">Historia</button>
+            <button onclick="showPage('tecnologia'); toggleMobileMenu()" class="block w-full text-left">Tecnología</button>
+            <button onclick="showPage('impacto'); toggleMobileMenu()" class="block w-full text-left">Impacto Social</button>
+            <button onclick="showPage('equipo'); toggleMobileMenu()" class="block w-full text-left">Equipo</button>
+            <a href="#contacto" class="block w-full text-left bg-blue-600 text-white px-7 py-3 rounded-full text-center">Presentación IFE 2026</a>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <section id="view-home" class="page-view active-view">
+            <div class="blue-gradient text-white pt-24 pb-32 px-6">
+                <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div class="inline-flex items-center gap-3 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-blue-200 text-sm">
+                            <i class="fas fa-trophy text-yellow-400"></i>
+                            Winner DigiEduHack 2025 Local
+                        </div>
+                        <h1 class="text-6xl font-extrabold leading-[1.1]">Democratizando la <span class="text-blue-400 leading-normal italic">Neuroeducación</span> con IA</h1>
+                        <p class="text-xl text-blue-100/70 leading-relaxed max-w-lg">
+                            Plataforma de intervención temprana para niños con TEA que ajusta el aprendizaje en tiempo real basado en métricas neurocognitivas. Nacida de la pasión por cerrar brechas en México.
+                        </p>
+                        <div class="flex flex-wrap gap-5">
+                            <button onclick="showPage('tecnologia')" class="bg-white text-blue-900 px-10 py-4 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-white/10 transition-all active:scale-95">
+                                Explorar Algoritmo
+                            </button>
+                            <div class="flex -space-x-3 items-center">
+                                <div class="w-12 h-12 rounded-full border-2 border-blue-900 bg-blue-500 flex items-center justify-center font-bold">L</div>
+                                <div class="w-12 h-12 rounded-full border-2 border-blue-900 bg-blue-600 flex items-center justify-center font-bold">D</div>
+                                <div class="w-12 h-12 rounded-full border-2 border-blue-900 bg-blue-700 flex items-center justify-center font-bold">M</div>
+                                <span class="pl-6 text-sm text-blue-300 font-semibold tracking-wide uppercase">Powered by Líderes del Mañana</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-blue-500 rounded-3xl blur-3xl opacity-20 group-hover:opacity-30 transition-all"></div>
+                        <div class="relative stat-card p-6 md:p-10 rounded-3xl backdrop-blur-md overflow-hidden">
+                            <h3 class="text-blue-400 font-bold uppercase text-[10px] tracking-[0.2em] mb-6">Live AI Response Optimization</h3>
+                            <div class="relative h-[250px] w-full">
+                                <canvas id="mainChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="view-historia" class="page-view hidden-view py-24 px-6 max-w-7xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-blue-900 mb-12 text-center">Nuestra Historia y Motivación</h2>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Orígenes: Una Pasión Compartida</h3>
+                    <p class="text-lg text-slate-600 mb-6">Neuro-BlueMinds nació en 2025 en el Tecnológico de Monterrey, Campus Guadalajara, de un equipo de estudiantes de ingeniería (biomédica, mecánica, biotecnología y programación) unidos por el programa Líderes del Mañana. Motivados por la crisis de acceso a terapias para niños con Trastorno del Espectro Autista (TEA) en México —donde costos mensuales superan los $12,800 MXN y listas de espera llegan a 2 años— decidimos crear una solución accesible y escalable.</p>
+                    <p class="text-lg text-slate-600">Inspirados en la neuroplasticidad infantil y modelos clínicos como ABA y VARK, integramos IA para hacer la intervención hiperadaptativa. Nuestro primer hito: Ganar la etapa local de DigiEduHack 2025, organizada por el IFE y la Unión Europea, lo que nos abrió puertas a la IFE Conference 2026.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Motivación: Cerrar Brechas Sociales</h3>
+                    <p class="text-lg text-slate-600 mb-6">En México, 1 de cada 115 niños tiene TEA, pero el 70% en zonas rurales (como Oaxaca o Chiapas) no accede a intervención temprana. Esto genera rezagos irreversibles. Nuestra motivación es empoderar familias vulnerables, reduciendo brechas económicas y geográficas mediante una plataforma semigratuita que acelera el progreso funcional en lenguaje, comunicación y habilidades socioemocionales.</p>
+                    <p class="text-lg text-slate-600">Con respaldo de especialistas en neuropsicología y el Instituto de Emprendimiento Eugenio Garza Lagüera, aspiramos a impactar a 1,500 usuarios en el primer año, transformando la educación especial en LatAm.</p>
+                </div>
+            </div>
+        </section>
+        <section id="view-tecnologia" class="page-view hidden-view py-24 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center mb-24">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Arquitectura Neuronal <br><span class="text-blue-600 italic">.NET Core + Real-Time IA/ML</span></h2>
+                    <p class="text-lg text-slate-600 mb-8">Nuestra plataforma no solo enseña, escucha. El backend analiza patrones bio-conductuales en milisegundos para evitar sobrecarga sensorial y ajustar trayectorias personalizadas basadas en perfiles neuroconductuales.</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-5 p-6 rounded-2xl bg-blue-50 border border-blue-100">
+                            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-600/20"><i class="fas fa-wave-square"></i></div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Análisis de Latencia (LPR)</h4>
+                                <p class="text-sm text-slate-600 mt-1">Monitorea el tiempo exacto entre estímulo y respuesta para detectar fatiga o frustración antes de que ocurra, reduciendo LPR en un 18%.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 p-6 rounded-2xl bg-indigo-50 border border-indigo-100">
+                            <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-indigo-600/20"><i class="fas fa-filter"></i></div>
+                            <div>
+                                <h4 class="font-bold text-indigo-900">Filtro de Errores (TEP)</h4>
+                                <p class="text-sm text-slate-600 mt-1">Identifica errores perseverativos y redirige la ruta de aprendizaje automáticamente, logrando -15% en TEP.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 p-6 rounded-2xl bg-purple-50 border border-purple-100">
+                            <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-purple-600/20"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <h4 class="font-bold text-purple-900">Validación Clínica</h4>
+                                <p class="text-sm text-slate-600 mt-1">Basado en ABA, NDBI y VARK, con apoyo de neuropsicólogos para estimular redes neuronales específicas (lenguaje, memoria, regulación emocional).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-slate-900 p-8 rounded-3xl text-white">
+                        <p class="text-4xl font-black mb-2">+25%</p>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest">Adquisición de Lenguaje</p>
+                    </div>
+                    <div class="bg-blue-600 p-8 rounded-3xl text-white mt-8">
+                        <p class="text-4xl font-black mb-2">-95%</p>
+                        <p class="text-xs text-blue-200 uppercase tracking-widest">Costo por Sesión</p>
+                    </div>
+                    <div class="col-span-2 relative h-[200px] w-full mt-8">
+                        <canvas id="techChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="view-impacto" class="page-view hidden-view py-24 px-6 bg-slate-50">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold text-blue-900 mb-8">Impacto Social: Transformando Vidas</h2>
+                <p class="text-xl text-slate-600 mb-12">Hoy, la terapia para TEA cuesta miles de pesos al mes y es inaccesible para el 70% de familias en México. Neuro-BlueMinds reduce esa barrera en un 95% mediante tecnología escalable, democratizando la intervención temprana y acelerando el progreso en niños de 4-12 años.</p>
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50">
+                        <div class="text-blue-600 mb-4 text-3xl"><i class="fas fa-users"></i></div>
+                        <h4 class="font-bold mb-2">Accesibilidad</h4>
+                        <p class="text-sm text-slate-500">Diseñado para dispositivos de gama media-baja, llegando a zonas rurales sin especialistas.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50">
+                        <div class="text-blue-600 mb-4 text-3xl"><i class="fas fa-graduation-cap"></i></div>
+                        <h4 class="font-bold mb-2">Inclusión</h4>
+                        <p class="text-sm text-slate-500">Herramientas para padres, educadores y terapeutas, fomentando integración en escuelas y comunidades.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50">
+                        <div class="text-blue-600 mb-4 text-3xl"><i class="fas fa-handshake"></i></div>
+                        <h4 class="font-bold mb-2">Ética IA</h4>
+                        <p class="text-sm text-slate-500">Privacidad absoluta, datos anónimos y algoritmos libres de sesgo, cumpliendo normativas locales.</p>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-600 mb-6">Métricas de Impacto Cuantificables</h3>
+                <table class="w-full text-left border-collapse mb-12">
+                    <thead>
+                        <tr class="bg-blue-100">
+                            <th class="p-4 font-bold">Habilidad</th>
+                            <th class="p-4 font-bold">Meta de Mejora</th>
+                            <th class="p-4 font-bold">Medición</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-4">Lenguaje Expresivo</td>
+                            <td class="p-4">+25%</td>
+                            <td class="p-4">Tasa de Adquisición de Respuesta (TAR)</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4">Atención Sostenida</td>
+                            <td class="p-4">+20%</td>
+                            <td class="p-4">Tiempo Máximo de Enfoque (TME)</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4">Velocidad de Procesamiento</td>
+                            <td class="p-4">-18%</td>
+                            <td class="p-4">Latencia Promedio de Respuesta (LPR)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4">Regulación Socioemocional</td>
+                            <td class="p-4">+15%</td>
+                            <td class="p-4">Porcentaje de Aciertos en Emociones</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="text-lg text-slate-600 mb-6">Proyecciones: Escalar a 1,500 usuarios activos en el primer año, integrando con gobiernos estatales para abatir rezagos en regiones vulnerables. Testimonios iniciales: "Cambió la vida de mi hijo al hacer la terapia accesible en casa" - Padre de familia piloto.</p>
+            </div>
+        </section>
+        <section id="view-equipo" class="page-view hidden-view py-24 px-6">
+            <div class="max-w-7xl mx-auto text-center">
+                <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Talento Líderes del Mañana</span>
+                <h2 class="text-4xl font-extrabold text-blue-900 mt-4 mb-16">El equipo detrás de la innovación</h2>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                    <div class="group">
+                        <div class="w-24 h-24 bg-blue-100 rounded-3xl mx-auto mb-6 flex items-center justify-center text-blue-600 text-2xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-all shadow-inner">LN</div>
+                        <h4 class="font-bold text-slate-900">Luis Nazariego</h4>
+                        <p class="text-xs text-blue-600 font-semibold uppercase mt-1">CEO & IBM</p>
+                        <p class="text-sm text-slate-600 mt-2">Líder visionario motivado por el impacto social en neurodesarrollo.</p>
+                    </div>
+                    <div class="group">
+                        <div class="w-24 h-24 bg-blue-100 rounded-3xl mx-auto mb-6 flex items-center justify-center text-blue-600 text-2xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-all shadow-inner">
+                            <img src="Media/victor.webp" class="rounded-3xl"/>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Víctor André</h4>
+                        <p class="text-xs text-blue-600 font-semibold uppercase mt-1">Backend & IA</p>
+                        <p class="text-sm text-slate-600 mt-2">Experto en ML, apasionado por algoritmos que cambian vidas.</p>
+                    </div>
+                    <div class="group">
+                        <div class="w-24 h-24 bg-blue-100 rounded-3xl mx-auto mb-6 flex items-center justify-center text-blue-600 text-2xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-all shadow-inner">JF</div>
+                        <h4 class="font-bold text-slate-900">Jose Miguel</h4>
+                        <p class="text-xs text-blue-600 font-semibold uppercase mt-1">UX Sensorial</p>
+                        <p class="text-sm text-slate-600 mt-2">Diseñador enfocado en interfaces inclusivas para neurodivergencia.</p>
+                    </div>
+                    <div class="group">
+                        <div class="w-24 h-24 bg-blue-100 rounded-3xl mx-auto mb-6 flex items-center justify-center text-blue-600 text-2xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-all shadow-inner">DL</div>
+                        <h4 class="font-bold text-slate-900">Diego Martín</h4>
+                        <p class="text-xs text-blue-600 font-semibold uppercase mt-1">Frontend Dev</p>
+                        <p class="text-sm text-slate-600 mt-2">Creador de experiencias intuitivas y accesibles.</p>
+                    </div>
+                    <div class="group">
+                        <div class="w-24 h-24 bg-blue-100 rounded-3xl mx-auto mb-6 flex items-center justify-center text-blue-600 text-2xl font-bold group-hover:bg-blue-600 group-hover:text-white transition-all shadow-inner">CB</div>
+                        <h4 class="font-bold text-slate-900">Carlos Alberto</h4>
+                        <p class="text-xs text-blue-600 font-semibold uppercase mt-1">Estrategia IBT</p>
+                        <p class="text-sm text-slate-600 mt-2">Estratega en biotecnología para escalabilidad sostenible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contacto" class="bg-slate-950 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center"><i class="fas fa-brain text-sm"></i></div>
+                    <span class="text-xl font-black">NEURO-BLUEMINDS</span>
+                </div>
+                <p class="text-slate-400 max-w-sm mb-8">
+                    Expositores en el IFE Conference 2026, Monterrey N.L. <br>
+                    Transformando el futuro de la educación especial desde el Tecnológico de Monterrey.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/neuro-blueminds" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/neuroblueminds/" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-slate-800 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+                <h3 class="text-lg font-bold text-blue-400 mt-8 mb-4">Próximos Pasos</h3>
+                <p class="text-slate-400 text-sm">Lanzamiento de Prueba Piloto en 2026 (N=155 usuarios). Buscamos alianzas con instituciones para escalar a TDAH y otros trastornos. ¡Únete!</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                <h4 class="font-bold text-xl mb-4 text-blue-400">¿Eres inversionista o institución?</h4>
+                <p class="text-slate-400 text-sm mb-6 font-semibold">Estamos abiertos a alianzas para la fase de pilotaje 2026.</p>
+                <a href="mailto:blueminds.tea@gmail.com" class="block w-full bg-blue-600 p-4 rounded-xl font-bold hover:bg-blue-700 transition">Contactar al Equipo</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // SPA TRANSITION LOGIC
+        function showPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(view => {
+                view.classList.add('hidden-view');
+                view.classList.remove('active-view');
+            });
+            const activeView = document.getElementById('view-' + pageId);
+            activeView.classList.remove('hidden-view');
+            setTimeout(() => activeView.classList.add('active-view'), 50);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            toggleMobileMenu(false); // Cierra menú mobile si abierto
+        }
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu(force = null) {
+            const menu = document.getElementById('mobile-menu');
+            if (force !== null) {
+                menu.classList.toggle('hidden', force);
+            } else {
+                menu.classList.toggle('hidden');
+            }
+        }
+        // CHART CONFIGURATIONS
+        const ctxMain = document.getElementById('mainChart').getContext('2d');
+        new Chart(ctxMain, {
+            type: 'line',
+            data: {
+                labels: ['Línea Base', 'Día 5', 'Día 10', 'Día 15', 'Día 20', 'Final'],
+                datasets: [{
+                    label: 'Eficiencia Cognitiva',
+                    data: [10, 25, 45, 65, 85, 95],
+                    borderColor: '#60a5fa',
+                    borderWidth: 4,
+                    pointBackgroundColor: '#fff',
+                    fill: true,
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
+                    y: { display: false }
+                }
+            }
+        });
+        const ctxTech = document.getElementById('techChart')?.getContext('2d');
+        if (ctxTech) {
+            new Chart(ctxTech, {
+                type: 'bar',
+                data: {
+                    labels: ['Lenguaje', 'Atención', 'Procesamiento'],
+                    datasets: [{
+                        label: 'Mejora (%)',
+                        data: [25, 20, -18],
+                        backgroundColor: ['#3b82f6', '#6366f1', '#ef4444']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
