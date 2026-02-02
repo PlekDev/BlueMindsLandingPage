@@ -61,13 +61,14 @@
                 <button onclick="showPage('historia')" class="hover:text-blue-600 transition">Historia</button>
                 <button onclick="showPage('tecnologia')" class="hover:text-blue-600 transition">Tecnología</button>
                 <button onclick="showPage('impacto')" class="hover:text-blue-600 transition">Impacto Social</button>
+                <button onclick="showPage('sponsors')" class="hover:text-blue-600 transition">Sponsors</button>
                 <button onclick="showPage('equipo')" class="hover:text-blue-600 transition">Equipo</button>
                 <a href="https://plekdev.github.io/BlueMinds/" target="_blank" class="bg-green-600 text-white px-7 py-3 rounded-full hover:bg-green-700 transition shadow-xl shadow-green-600/20 active:scale-95">
                     Probar Demo
                 </a>
-                <a href="#contacto" class="bg-blue-600 text-white px-7 py-3 rounded-full hover:bg-blue-700 transition shadow-xl shadow-blue-600/20 active:scale-95">
+                <button onclick="showPage('ife')" class="bg-blue-600 text-white px-7 py-3 rounded-full hover:bg-blue-700 transition shadow-xl shadow-blue-600/20 active:scale-95">
                     Presentación IFE 2026
-                </a>
+                </button>
             </div>
             <button class="lg:hidden text-2xl text-slate-600" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
         </div>
@@ -76,6 +77,7 @@
             <button onclick="showPage('historia'); toggleMobileMenu()" class="block w-full text-left">Historia</button>
             <button onclick="showPage('tecnologia'); toggleMobileMenu()" class="block w-full text-left">Tecnología</button>
             <button onclick="showPage('impacto'); toggleMobileMenu()" class="block w-full text-left">Impacto Social</button>
+            <button onclick="showPage('ife'); toggleMobileMenu()" class="block w-full text-left">IFE Conference 2026</button>
             <button onclick="showPage('sponsors'); toggleMobileMenu()" class="block w-full text-left">Sponsors</button>
             <button onclick="showPage('equipo'); toggleMobileMenu()" class="block w-full text-left">Equipo</button>
             <a href="#contacto" class="block w-full text-left bg-blue-600 text-white px-7 py-3 rounded-full text-center">Presentación IFE 2026</a>
@@ -241,7 +243,7 @@
                 <p class="text-lg text-slate-600 mb-6">Proyecciones: Escalar a 1,500 usuarios activos en el primer año, integrando con gobiernos estatales para abatir rezagos en regiones vulnerables. Testimonios iniciales: "Cambió la vida de mi hijo al hacer la terapia accesible en casa" - Padre de familia piloto.</p>
             </div>
         </section>
-    <section id="view-sponsors" class="py-20 px-6 bg-slate-50">
+<section id="view-sponsors" class="page-view py-20 px-6 bg-slate-50">
     <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Nuestros Aliados Estratégicos</h2>
         <p class="text-slate-500 mb-16 max-w-2xl mx-auto">Gracias al respaldo de líderes y organizaciones que creen en la democratización de la neuroeducación.</p>
@@ -284,6 +286,77 @@
                 <p class="text-xs text-slate-500 mt-2">Escuela de Ingeniería y Ciencias <br>Campus Monterrey</p>
             </div>
             
+        </div>
+    </div>
+</section>
+<section id="view-ife" class="page-view hidden-view py-24 px-6 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center gap-3 bg-blue-100 text-blue-800 px-5 py-2 rounded-full text-sm font-semibold mb-6">
+            <i class="fas fa-trophy text-yellow-500"></i>
+            IFE Conference 2026 – Monterrey, N.L.
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6">
+            Presentamos Neuro-BlueMinds en el escenario mundial
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-12">
+            Gracias al apoyo de nuestros aliados estratégicos, llevamos la voz de México y la esperanza de miles de familias al <strong>IFE Conference 2026</strong>. 
+            Nuestro stand fue un éxito total: cientos de asistentes conocieron la plataforma, líderes educativos y clínicos se interesaron y cerramos alianzas clave para la fase de escalamiento.
+        </p>
+
+        <!-- Galería de fotos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Foto 1: Stand completo -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                <img src="Media/IFE/EquipoNeuro.jpg" alt="Nuestro stand en IFE Conference" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                    <p class="text-white font-semibold">Nuestro stand: Neuro-BlueMinds en acción</p>
+                </div>
+            </div>
+
+            <!-- Foto 2: Presentación o equipo hablando -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                <img src="Media/IFE/FotoStand2.jpg" alt="Equipo presentando" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                    <p class="text-white font-semibold">Exponiendo ante líderes globales</p>
+                </div>
+            </div>
+
+            <!-- Foto 3: Networking o foto grupal -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                <img src="Media/IFE/Networking2.jpg" alt="Networking IFE" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                    <p class="text-white font-semibold">Conexiones que transforman vidas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultados clave (impacto cuantitativo) -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-8 rounded-3xl shadow-xl">
+                <div class="text-5xl font-black text-blue-600 mb-4">+350</div>
+                <p class="text-slate-600">Asistentes conocieron la plataforma</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl">
+                <div class="text-5xl font-black text-blue-600 mb-4">12</div>
+                <p class="text-slate-600">Alianzas estratégicas iniciadas</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl">
+                <div class="text-5xl font-black text-blue-600 mb-4">IFE</div>
+                <p class="text-slate-600">Ponencia oficial aceptada</p>
+            </div>
+        </div>
+
+        <!-- Mensaje de agradecimiento a patrocinadores -->
+        <div class="bg-blue-50 border border-blue-100 rounded-3xl p-10 max-w-4xl mx-auto">
+            <h3 class="text-2xl font-bold text-blue-900 mb-6">Agradecimiento especial</h3>
+            <p class="text-lg text-slate-700 mb-8">
+                Este logro no sería posible sin el apoyo incondicional de Grupo Roga, Líderes del Mañana, el Tecnológico de Monterrey y todos los que creyeron en la visión desde el día 1. 
+                Cada foto, cada conversación y cada conexión en IFE 2026 es prueba de que juntos estamos transformando vidas.
+            </p>
+            <a href="mailto:blueminds.tea@gmail.com" class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition">
+                <i class="fas fa-handshake"></i>
+                Quiero ser parte del impacto
+            </a>
         </div>
     </div>
 </section>
@@ -344,7 +417,7 @@
                     <a href="https://www.instagram.com/neuroblueminds/" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-slate-800 transition"><i class="fab fa-instagram"></i></a>
                 </div>
                 <h3 class="text-lg font-bold text-blue-400 mt-8 mb-4">Próximos Pasos</h3>
-                <p class="text-slate-400 text-sm">Próximos Pasos: Presentación de resultados en el IFE Conference (Enero 2026). ¡Visítanos en nuestro stand y conoce cómo estamos reduciendo la latencia cognitiva en niños con TEA!</p>
+                <p class="text-slate-400 text-sm">Próximos Pasos: Prueba de piloto en escuelas de Oaxaca, presentación versión 1.0 en Abril, ¡No te lo pierdas!</p>
             </div>
             <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
                 <h4 class="font-bold text-xl mb-4 text-blue-400">¿Quieres probar Neuro-BlueMinds?</h4>
@@ -357,7 +430,7 @@
 
                 <p class="text-slate-400 text-sm mb-6 font-semibold">Estamos abiertos a alianzas para la fase de pilotaje 2026.</p>
                 
-                <a href="mailto:blueminds.tea@gmail.com" class="block w-full bg-blue-600 p-4 rounded-xl font-bold hover:bg-blue-700 transition">Contactar al Equipo</a>
+                <a href="mailto:blueminds.tea@gmail.com" class="block w-full bg-blue-600 p-4 rounded-xl font-bold text-center hover:bg-blue-700 transition">Contactar al Equipo</a>
             </div>
         </div>
     </footer>
