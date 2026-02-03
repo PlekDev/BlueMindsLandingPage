@@ -19,8 +19,8 @@ Esta landing page actúa como el rostro corporativo del proyecto, optimizada par
 
 ## 🌐 Accesos Directos
 
-- **Demo en Vivo (Landing)**: [https://tu-usuario.github.io/neuro-blueminds](https://tu-usuario.github.io/neuro-blueminds)
-- **Acceso a la Plataforma (MVP)**: *Próximamente en [https://app.neuroblueminds.com](https://app.neuroblueminds.com)*
+- **Demo en Vivo (Landing)**: [https://plekdev.github.io/neuro-blueminds](https://plekdev.github.io/neuro-blueminds)
+- **Acceso a la Plataforma (MVP)**: *Próximamente en [https://plekdev.github.io/BlueMinds](https://plekdev.github.io/BlueMinds)*
 
 ---
 
